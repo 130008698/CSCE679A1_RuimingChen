@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HK Monthly Temperature Matrix</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 40px 50px;
+      color: #222;
+    }
+
+    header {
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 4px;
+    }
+
+    header p {
+      font-size: 13px;
+      color: #666;
+      margin: 0;
+    }
+
+    /* Shows current mode (Max / Min) — updated by main.js on click */
+    #mode-label {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      background: #222;
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    #chart {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      display: block;
+    }
+
+    /* Hover tooltip — shown/hidden by main.js */
+    #tooltip {
+      position: absolute;
+      background: rgba(30, 30, 30, 0.88);
+      color: #fff;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      line-height: 1.6;
+      pointer-events: none;
+      display: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hong Kong Monthly Temperature</h1>
+    <p>Last 10 years of data &mdash; click the chart to toggle between Max and Min temperature</p>
+    <span id="mode-label">Showing: Max Temp</span>
+  </header>
+
+  <div id="tooltip"></div>
+  <svg id="chart"></svg>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
