@@ -8,9 +8,10 @@ python -m http.server 8080
 
 # Node.js
 npx serve .
-```
 
 Then open [http://localhost:8080](http://localhost:8080) in your browser.
+
+```
 
 In this task, you need to draw a **Matrix View** to visualize the **Monthly Temperature** of Hong Kong, where the color of each matrix cell encodes the temperature. You can find the data in [temperature_daily.csv](./temperature_daily.csv). You only need to focus on the last 10 years of data.
 
