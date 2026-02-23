@@ -6,6 +6,8 @@
 # Python 3
 python -m http.server 8080
 
+or
+
 # Node.js
 npx serve .
 
